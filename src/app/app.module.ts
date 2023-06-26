@@ -5,13 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './core/components/app.component';
 import { HomeComponent } from './core/components/home.component';
 import { SigninCallbackComponent } from './core/components/signin-callback.component';
+import { SilentSigninCallbackComponent } from "./core/components/silent-signin-callback.component";
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SigninCallbackComponent
+    SigninCallbackComponent,
+    SilentSigninCallbackComponent
   ],
   imports: [
     BrowserModule,

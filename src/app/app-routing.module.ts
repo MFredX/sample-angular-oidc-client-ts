@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { HomeComponent } from './core/components/home.component';
 import { SigninCallbackComponent } from './core/components/signin-callback.component';
+import { SilentSigninCallbackComponent } from "./core/components/silent-signin-callback.component";
 
 // @Injectable({ providedIn: 'root' })
 // export class SignInCallback implements CanActivate {
@@ -21,6 +22,7 @@ import { SigninCallbackComponent } from './core/components/signin-callback.compo
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'signin-callback', component: SigninCallbackComponent },
+  { path: 'auth-silent-callback', component: SilentSigninCallbackComponent },
 ];
 
 @NgModule({
