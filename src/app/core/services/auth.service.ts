@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User, UserManager } from 'oidc-client-ts';
+import {Log, User, UserManager} from 'oidc-client-ts';
 import { environment } from 'src/environments/environment';
 
 
@@ -21,6 +21,10 @@ export class AuthService {
       scope: environment.clientScope
     };
     this.userManager = new UserManager(settings);
+
+    //Comment the following 2 lines to toggle package logs
+    Log.setLogger(console);
+    Log.setLevel(Log.DEBUG);
   }
 
   public getUser(): Promise<User> {
