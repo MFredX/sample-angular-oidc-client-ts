@@ -18,7 +18,8 @@ export class AuthService {
       silent_redirect_uri: `${environment.clientRoot}silent-callback.html`,
       post_logout_redirect_uri: `${environment.clientRoot}`,
       response_type: 'code',
-      scope: environment.clientScope
+      scope: environment.clientScope,
+      automaticSilentRenew: true
     };
     this.userManager = new UserManager(settings);
 
